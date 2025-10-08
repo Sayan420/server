@@ -23,10 +23,14 @@ public class Main {
         {
             stringaRicevuta = in.readLine();
             String stringaMaiuscola = stringaRicevuta.toUpperCase();
-            out.println(stringaMaiuscola);
+            if (!stringaMaiuscola.equals("!")) {
+                out.println(stringaMaiuscola);
+            }
+            
         }while(!stringaRicevuta.equals("!"));
 
         
         mioServerSocket.close();
+        System.out.println("Connessione interrotta");
     }
 }
